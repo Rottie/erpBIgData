@@ -12,6 +12,8 @@ require("./config/mongoose");
 
 //-----------------------------------Step 3 app yse
 const app = express();
+
+const PORT = process.env.PORT || 5000;
 //
 app.use(express.json());
 
@@ -26,6 +28,6 @@ app.get("/", (req, res) => {
 });
 
 // setting port 3000
-app.listen(5000, () => {
-  console.log("Server running port 5000");
+app.listen(PORT, () => {
+  console.log(`Server running http://localhost:${PORT}`);
 });
